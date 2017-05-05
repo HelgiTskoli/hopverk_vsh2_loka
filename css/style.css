@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Russo+One|Dancing+Script|Exo|Space+Mono|Cormorant+SC');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Russo+One|Dancing+Script|Exo|Space+Mono|Cormorant+SC|Inknut+Antiqua');
 
 body{
     margin: 0;
@@ -18,20 +18,23 @@ header:hover{
     height: 110px;
     transition: height 0.4s;
 }
-
+header:hover ~ section a{
+    margin-top: 125px;
+}
 header ul{
     margin: 0 auto;
     width: 100vw;
     padding-left: 0px;
 }
-header ul li{
+header ul li, section a{
     letter-spacing: 0.1px;
     word-spacing: 2px;
     display: inline-block;
     margin: 0px; 
     padding-left: 10px;
     padding-right: 10px;
-    color: black;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 2px black;
     font-family: 'Space Mono', monospace;
     font-size: 30px;
     transition: all 0.8s;
@@ -44,11 +47,21 @@ header:hover li{
 }
 header ul li:hover{
     background-color: rgba(255, 255, 255, 0.5);
-    font-size: 40px;
+    /*font-size: 40px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
     transition: all 0.4s;
 }
 a{
     text-decoration:none;
+}
+section a{
+    position: fixed;
+    margin-top: 60px;
+    font-size: 20px;
+}
+section a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
 }
 section h1{
     font-family: 'Cormorant SC', serif;
@@ -68,8 +81,30 @@ section h1.nr2{
     animation: fade 5s 5.5s forwards;
 }
 section h1.nr3{
-    animation: fade 5s 10.5s forwards;
+    animation: fade2 5s 10.5s forwards, move-up 3s 13.5s forwards ease-in-out;
     font-size: 200px;
+}
+article{
+    display: inline-block;
+    width: 100%;
+}
+article div{
+    position: fixed;
+    border: solid rgba(255,255,255, 0.25) 1px;
+    width: 70%;
+    margin: 320px 0px 0px 15%;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Inknut Antiqua', serif;
+    animation: atburdur 3.5s 13.5s ease-in-out, fade2 3.5s 13.5s forwards;
+    opacity: 0;
+    border-radius: 5px;
+}
+article div h2,p{
+    padding-left: 300px;
+    padding-right: 300px;
 }
 @keyframes fade{
     0%{
@@ -79,4 +114,25 @@ section h1.nr3{
      }100%{
           opacity:0;
       }
+}
+@keyframes fade2{
+    to{
+        opacity: 1;
+    }from{
+         opacity: 0;
+     }
+}
+@keyframes move-up{
+    to{
+        margin-top: 65px;
+    }
+}
+@keyframes atburdur{
+    to{
+        margin-top: 320px;
+        /*opacity: 1;*/
+    }from{
+         margin-top: 550px;
+         /*opacity: 0;*/
+     }
 }

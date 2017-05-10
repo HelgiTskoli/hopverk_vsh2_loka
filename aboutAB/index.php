@@ -1,0 +1,1 @@
+<?php header("Location: http://hivenet.is/arnheidur/index.php/nam_og_storf"); ?>

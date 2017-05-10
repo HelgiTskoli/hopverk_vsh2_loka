@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="author" content="Helgi Steinarr Júlíusson, Albert Elías Arason, Steinar Ari Kristmundsson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loka hópverkefni í VSH2">   <!-- Muna bæta við betra descriptioni  -->
+    <meta name="keywords" content="HTML,CSS3,Verkefni,vsh,tskoli,PHP">
+    <link rel="icon" href="./media/gloi_face.png" />
+    <title>Hópverkefni</title>
+    <script>
+        window.onload = function () {
+            setTimeout(function () { document.getElementById("skipA").style.opacity = "0" }, 13500)
+            setTimeout(function () { document.getElementById("skipA").remove() }, 14000)
+        }
+    </script>
+    <style>
+        /* ÞETTA ER TIL AÐ YFIRSKRIFA CSS-IÐ */
+        @media(max-width: 60em) {
+            @keyframes move-up {
+                to {
+                    margin-top: 95px;
+                }
+            }
+        }@media(max-width: 37.5em){
+            @keyframes move-up {
+                to {
+                    margin-top: 60px;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle">Menu</label>
+        <nav>
+            <ul>
+                <a href="./"><li>Forsíða</li></a>
+                <a href="./eventInfo"><li>Um atburðinn</li></a>
+                <a href="./aboutG"><li>Um Glóa Geimveru</li></a>
+                <a href="./order"><li>Kaupa miða</li></a>
+                <a href="./aboutAB"><li>Um Arnheiði Borg</li></a>
+                <a href="./order/cart"><img heigth="80" width="70" src="./media/Cart-Icon.png"></a>  <!-- This is visible until navbar goes to the buttom -->
+                <a id="cartText" href="./order/cart"><li>Karfa</li></a> <!-- This is hidden until the nav bar goes to the bottom -->
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <a id="skipA" href="./eventInfo">SKIP ANIMATION</a>
+        <h1 class="nr1">
+            Vilt <b>þú</b> hitta Glóa Geimveru?
+        </h1>
+        <h1 class="nr2">
+            Því hann verður á stærstu hátíð aldarinnar
+        </h1>
+        <h1 class="nr3">
+            GEIMFEST GLÓA
+        </h1>
+        <article>
+            <div>
+                <h2>Um atburðinn</h2>
+                <p>
+                    Geimfest Glóa er stærsta hátíð sem verður haldin á þessari öld! Þessi hátíð er fyrir alla fjölskylduna og er til heiðurs okkar uppáhalds karakters og geimveru, honum Glóa Geimveru! Hátíðin verður haldið í Hörpuni <b><i><u>13 til 14 júlí</u></i></b> og tímasetningar er hægt að finna í töflunni hér fyrir neðan og undir henni er kort af Hörpu.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tími</th>
+                            <th>Staður</th>
+                            <th>Tegund</th>
+                            <th>Lýsing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dagur 1<br />15:00-17:00</td>
+                            <td>Bygging 1</td>
+                            <td>Kynning og sýningar</td>
+                            <td id="desc">Kynning á hátíðinni <br />og suttar sýningar <br />af borðum leiksins</td>
+                        </tr>
+                        <tr>
+                            <td>Dagur 1<br />17:10-19:10</td>
+                            <td>Bygging 2</td>
+                            <td>Stór-sýningar</td>
+                            <td id="desc">Leiktar sýningar og <br />kafað er dýpra inní<br /> borð leiksins</tdid="desc">
+                        </tr>
+                        <tr>
+                            <td>Dagur 1<br />19:30-21:00</td>
+                            <td>Bygging 2 - VIP lounge</td>
+                            <td>Sérstök sýning Glóa</td>
+                            <td id="desc">Hér getiði séð Glóa sýna <br />sína sérstöku sýningu - <br />aðeins þeir sem eiga <br />Golden pass komast hingað</td>
+                        </tr>
+                        <tr>
+                            <td>Dagur 2<br />15:00-17:00</td>
+                            <td>Bygging 2 - VIP lounge</td>
+                            <td>Hittingur</td>
+                            <td id="desc">Hér er hægt að hitta Glóa <br />persónulega - aðeins fyrir <br />þá sem eiga "HITTA GLÓA" <br />auka pakkann</td>
+                        </tr>
+                        <tr>
+                            <td>Dagur 2<br />17:10-19:10</td>
+                            <td>Bygging 1</td>
+                            <td>Hittingur</td>
+                            <td id="desc">Hér er hægt að prófa hin <br />eina sanna búning Glóa<br /> - aðeins fyrir þá sem eiga <br />"Prófa Búning Glóa" <br />auka pakkann</td>
+                        </tr>
+                        <tr>
+                            <td>Dagur 2<br />19:30-21:00</td>
+                            <td>Bygging 2</td>
+                            <td>Veisla</td>
+                            <td id="desc">Alvöru veilsa haldin <br />með glæsilegum kræsingum</td>
+                        </tr>
+                        <tr>
+                            <td>Dagur 3<br />15:00-16:00</td>
+                            <td>Bygging 1</td>
+                            <td>Sýning og Lok</td>
+                            <td id="desc">Loka sýning sýnd og Glói <br />flýgur á brott til að<br /> loka hátíðinni</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.6009528423444!2d-21.931753979358525!3d64.15041656640946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa813064fd5697156!2sHarpa+Concert+Hall+and+Conference+Centre!5e0!3m2!1sen!2sis!4v1494386771299" width="600" height="450" frameborder="0" style="border: solid rgba(255, 255, 255, 0.25) 2px" allowfullscreen></iframe>
+            </div>
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
